@@ -684,3 +684,222 @@ Started GET "/" for 127.0.0.1 at 2014-11-01 22:32:03 +0900
 Processing by TopController#index as HTML
   Rendered top/index.html.erb within layouts/review_site (0.0ms)
 Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-22 17:17:37 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/tominagaosamuakira/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 20ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (34.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (21.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProducts (20170822081824)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tominagaosamuakira/projects/mooovi5/db/migrate/20170822081824_create_products.rb:10)
+  [1m[35m (13.9ms)[0m  CREATE TABLE `products` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255), `image_url` text, `director` varchar(255), `detail` text, `open_date` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20170822081824')
+  [1m[36m (3.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (1.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi5_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ケージ・ダイブ', 'http://eiga.k-img.com/images/movie/87277/photo/41d5d29a7ea46b41/320.jpg?1499062696', '2017-08-22 08:54:58', '2017-08-22 08:54:58')
+  [1m[36m (4.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('フェリシーと夢のトウシューズ', 'http://eiga.k-img.com/images/movie/86684/photo/e488779e0ed18eb9/320.jpg?1499740950', '2017-08-22 08:54:59', '2017-08-22 08:54:59')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('海底47m', 'http://eiga.k-img.com/images/movie/86190/photo/aa98ce6f5526600d/320.jpg?1496300656', '2017-08-22 08:54:59', '2017-08-22 08:54:59')
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ハイドリヒを撃て！「ナチの野獣」暗殺作戦', 'http://eiga.k-img.com/images/movie/86851/photo/85704cea7bd6f6b2/320.jpg?1491358304', '2017-08-22 08:55:00', '2017-08-22 08:55:00')[0m
+  [1m[35m (1.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('RE:BORN リボーン', 'http://eiga.k-img.com/images/movie/87343/photo/614e1e14b2217216/320.jpg?1498007655', '2017-08-22 08:55:00', '2017-08-22 08:55:00')
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('海の彼方', 'http://eiga.k-img.com/images/movie/86782/photo/eb83471baa036e3b/320.jpg?1496995253', '2017-08-22 08:55:01', '2017-08-22 08:55:01')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('コスタリカの奇跡　積極的平和国家のつくり方', 'http://eiga.k-img.com/images/movie/87025/photo/0c7d3ffb139fe195/320.jpg?1499825157', '2017-08-22 08:55:01', '2017-08-22 08:55:01')
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('チャルカ　未来を紡ぐ糸車', 'http://eiga.k-img.com/images/movie/87378/photo/c670dc0f6cc0133f/320.jpg?1499050431', '2017-08-22 08:55:01', '2017-08-22 08:55:01')[0m
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('デス・レース2000年', 'http://eiga.k-img.com/images/movie/46975/photo/a128b80c7c15da37/320.jpg?1497924016', '2017-08-22 08:55:02', '2017-08-22 08:55:02')
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('隣人のゆくえ　あの夏の歌声', 'http://eiga.k-img.com/images/movie/87223/photo/29fda6b687d32992/320.jpg?1496709969', '2017-08-22 08:55:02', '2017-08-22 08:55:02')[0m
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('スパイダーマン　ホームカミング', 'http://eiga.k-img.com/images/movie/82383/photo/0b817fb31d09c8f8/320.jpg?1495614441', '2017-08-22 08:55:03', '2017-08-22 08:55:03')
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('少女ファニーと運命の旅', 'http://eiga.k-img.com/images/movie/86923/photo/0594040d871cb912/320.jpg?1495070724', '2017-08-22 08:55:03', '2017-08-22 08:55:03')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('劇場版　仮面ライダーエグゼイド　トゥルー・エンディング', 'http://eiga.k-img.com/images/movie/86299/photo/908fd8dbfaddae44/320.jpg?1499915987', '2017-08-22 08:55:04', '2017-08-22 08:55:04')
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('エブリシング', 'http://eiga.k-img.com/images/movie/87147/photo/01cd83f50b35f592/320.jpg?1499651801', '2017-08-22 08:55:04', '2017-08-22 08:55:04')[0m
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('夜明けの祈り', 'http://eiga.k-img.com/images/movie/86006/photo/21db1e76444cdf3f/320.jpg?1496395345', '2017-08-22 08:55:05', '2017-08-22 08:55:05')
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ロスト・イン・パリ', 'http://eiga.k-img.com/images/movie/87049/photo/f644c3ae5d95b99e/320.jpg?1493688809', '2017-08-22 08:55:05', '2017-08-22 08:55:05')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('スターシップ9', 'http://eiga.k-img.com/images/movie/87139/photo/0be455862433630b/320.jpg?1495158426', '2017-08-22 08:55:06', '2017-08-22 08:55:06')
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('きっと、いい日が待っている', 'http://eiga.k-img.com/images/movie/87029/photo/e2b0dc1639406da5/320.jpg?1498018016', '2017-08-22 08:55:06', '2017-08-22 08:55:06')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('俺たちポップスター', 'http://eiga.k-img.com/images/movie/85070/photo/3acc00d40ba746fb/320.jpg?1498702556', '2017-08-22 08:55:06', '2017-08-22 08:55:06')
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('宇宙戦隊キュウレンジャー THE MOVIE ゲース・インダベーの逆襲', 'http://eiga.k-img.com/images/movie/86300/photo/ea8e50fac82eb91c/320.jpg?1499916101', '2017-08-22 08:55:07', '2017-08-22 08:55:07')[0m
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ケージ・ダイブ', 'http://eiga.k-img.com/images/movie/87277/photo/41d5d29a7ea46b41/320.jpg?1499062696', '2017-08-22 09:14:11', '2017-08-22 09:14:11')
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('フェリシーと夢のトウシューズ', 'http://eiga.k-img.com/images/movie/86684/photo/e488779e0ed18eb9/320.jpg?1499740950', '2017-08-22 09:14:13', '2017-08-22 09:14:13')[0m
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('海底47m', 'http://eiga.k-img.com/images/movie/86190/photo/aa98ce6f5526600d/320.jpg?1496300656', '2017-08-22 09:14:15', '2017-08-22 09:14:15')
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ハイドリヒを撃て！「ナチの野獣」暗殺作戦', 'http://eiga.k-img.com/images/movie/86851/photo/85704cea7bd6f6b2/320.jpg?1491358304', '2017-08-22 09:14:16', '2017-08-22 09:14:16')[0m
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('RE:BORN リボーン', 'http://eiga.k-img.com/images/movie/87343/photo/614e1e14b2217216/320.jpg?1498007655', '2017-08-22 09:14:17', '2017-08-22 09:14:17')
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('海の彼方', 'http://eiga.k-img.com/images/movie/86782/photo/eb83471baa036e3b/320.jpg?1496995253', '2017-08-22 09:14:21', '2017-08-22 09:14:21')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('コスタリカの奇跡　積極的平和国家のつくり方', 'http://eiga.k-img.com/images/movie/87025/photo/0c7d3ffb139fe195/320.jpg?1499825157', '2017-08-22 09:14:22', '2017-08-22 09:14:22')
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('チャルカ　未来を紡ぐ糸車', 'http://eiga.k-img.com/images/movie/87378/photo/c670dc0f6cc0133f/320.jpg?1499050431', '2017-08-22 09:14:22', '2017-08-22 09:14:22')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('デス・レース2000年', 'http://eiga.k-img.com/images/movie/46975/photo/a128b80c7c15da37/320.jpg?1497924016', '2017-08-22 09:14:23', '2017-08-22 09:14:23')
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('隣人のゆくえ　あの夏の歌声', 'http://eiga.k-img.com/images/movie/87223/photo/29fda6b687d32992/320.jpg?1496709969', '2017-08-22 09:14:23', '2017-08-22 09:14:23')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('スパイダーマン　ホームカミング', 'http://eiga.k-img.com/images/movie/82383/photo/0b817fb31d09c8f8/320.jpg?1495614441', '2017-08-22 09:14:24', '2017-08-22 09:14:24')
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('少女ファニーと運命の旅', 'http://eiga.k-img.com/images/movie/86923/photo/0594040d871cb912/320.jpg?1495070724', '2017-08-22 09:14:25', '2017-08-22 09:14:25')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('劇場版　仮面ライダーエグゼイド　トゥルー・エンディング', 'http://eiga.k-img.com/images/movie/86299/photo/908fd8dbfaddae44/320.jpg?1499915987', '2017-08-22 09:14:25', '2017-08-22 09:14:25')
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('エブリシング', 'http://eiga.k-img.com/images/movie/87147/photo/01cd83f50b35f592/320.jpg?1499651801', '2017-08-22 09:14:25', '2017-08-22 09:14:25')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('夜明けの祈り', 'http://eiga.k-img.com/images/movie/86006/photo/21db1e76444cdf3f/320.jpg?1496395345', '2017-08-22 09:14:26', '2017-08-22 09:14:26')
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ロスト・イン・パリ', 'http://eiga.k-img.com/images/movie/87049/photo/f644c3ae5d95b99e/320.jpg?1493688809', '2017-08-22 09:14:26', '2017-08-22 09:14:26')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('スターシップ9', 'http://eiga.k-img.com/images/movie/87139/photo/0be455862433630b/320.jpg?1495158426', '2017-08-22 09:14:27', '2017-08-22 09:14:27')
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('きっと、いい日が待っている', 'http://eiga.k-img.com/images/movie/87029/photo/e2b0dc1639406da5/320.jpg?1498018016', '2017-08-22 09:14:27', '2017-08-22 09:14:27')[0m
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('俺たちポップスター', 'http://eiga.k-img.com/images/movie/85070/photo/3acc00d40ba746fb/320.jpg?1498702556', '2017-08-22 09:14:28', '2017-08-22 09:14:28')
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('宇宙戦隊キュウレンジャー THE MOVIE ゲース・インダベーの逆襲', 'http://eiga.k-img.com/images/movie/86300/photo/ea8e50fac82eb91c/320.jpg?1499916101', '2017-08-22 09:14:28', '2017-08-22 09:14:28')[0m
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ケージ・ダイブ', 'http://eiga.k-img.com/images/movie/87277/photo/41d5d29a7ea46b41/320.jpg?1499062696', '2017-08-22 09:16:04', '2017-08-22 09:16:04')
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('フェリシーと夢のトウシューズ', 'http://eiga.k-img.com/images/movie/86684/photo/e488779e0ed18eb9/320.jpg?1499740950', '2017-08-22 09:16:05', '2017-08-22 09:16:05')[0m
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('海底47m', 'http://eiga.k-img.com/images/movie/86190/photo/aa98ce6f5526600d/320.jpg?1496300656', '2017-08-22 09:16:05', '2017-08-22 09:16:05')
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ハイドリヒを撃て！「ナチの野獣」暗殺作戦', 'http://eiga.k-img.com/images/movie/86851/photo/85704cea7bd6f6b2/320.jpg?1491358304', '2017-08-22 09:16:06', '2017-08-22 09:16:06')[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('RE:BORN リボーン', 'http://eiga.k-img.com/images/movie/87343/photo/614e1e14b2217216/320.jpg?1498007655', '2017-08-22 09:16:06', '2017-08-22 09:16:06')
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('海の彼方', 'http://eiga.k-img.com/images/movie/86782/photo/eb83471baa036e3b/320.jpg?1496995253', '2017-08-22 09:16:06', '2017-08-22 09:16:06')[0m
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('コスタリカの奇跡　積極的平和国家のつくり方', 'http://eiga.k-img.com/images/movie/87025/photo/0c7d3ffb139fe195/320.jpg?1499825157', '2017-08-22 09:16:07', '2017-08-22 09:16:07')
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('チャルカ　未来を紡ぐ糸車', 'http://eiga.k-img.com/images/movie/87378/photo/c670dc0f6cc0133f/320.jpg?1499050431', '2017-08-22 09:16:11', '2017-08-22 09:16:11')[0m
+  [1m[35m (1.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('デス・レース2000年', 'http://eiga.k-img.com/images/movie/46975/photo/a128b80c7c15da37/320.jpg?1497924016', '2017-08-22 09:16:12', '2017-08-22 09:16:12')
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('隣人のゆくえ　あの夏の歌声', 'http://eiga.k-img.com/images/movie/87223/photo/29fda6b687d32992/320.jpg?1496709969', '2017-08-22 09:16:12', '2017-08-22 09:16:12')[0m
+  [1m[35m (1.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('スパイダーマン　ホームカミング', 'http://eiga.k-img.com/images/movie/82383/photo/0b817fb31d09c8f8/320.jpg?1495614441', '2017-08-22 09:16:13', '2017-08-22 09:16:13')
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('少女ファニーと運命の旅', 'http://eiga.k-img.com/images/movie/86923/photo/0594040d871cb912/320.jpg?1495070724', '2017-08-22 09:16:13', '2017-08-22 09:16:13')[0m
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('劇場版　仮面ライダーエグゼイド　トゥルー・エンディング', 'http://eiga.k-img.com/images/movie/86299/photo/908fd8dbfaddae44/320.jpg?1499915987', '2017-08-22 09:16:13', '2017-08-22 09:16:13')
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('エブリシング', 'http://eiga.k-img.com/images/movie/87147/photo/01cd83f50b35f592/320.jpg?1499651801', '2017-08-22 09:16:14', '2017-08-22 09:16:14')[0m
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('夜明けの祈り', 'http://eiga.k-img.com/images/movie/86006/photo/21db1e76444cdf3f/320.jpg?1496395345', '2017-08-22 09:16:14', '2017-08-22 09:16:14')
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('ロスト・イン・パリ', 'http://eiga.k-img.com/images/movie/87049/photo/f644c3ae5d95b99e/320.jpg?1493688809', '2017-08-22 09:16:15', '2017-08-22 09:16:15')[0m
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('スターシップ9', 'http://eiga.k-img.com/images/movie/87139/photo/0be455862433630b/320.jpg?1495158426', '2017-08-22 09:16:15', '2017-08-22 09:16:15')
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('きっと、いい日が待っている', 'http://eiga.k-img.com/images/movie/87029/photo/e2b0dc1639406da5/320.jpg?1498018016', '2017-08-22 09:16:16', '2017-08-22 09:16:16')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('俺たちポップスター', 'http://eiga.k-img.com/images/movie/85070/photo/3acc00d40ba746fb/320.jpg?1498702556', '2017-08-22 09:16:16', '2017-08-22 09:16:16')
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `products` (`title`, `image_url`, `created_at`, `updated_at`) VALUES ('宇宙戦隊キュウレンジャー THE MOVIE ゲース・インダベーの逆襲', 'http://eiga.k-img.com/images/movie/86300/photo/ea8e50fac82eb91c/320.jpg?1499916101', '2017-08-22 09:16:17', '2017-08-22 09:16:17')[0m
+  [1m[35m (1.6ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2017-08-22 18:17:21 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/tominagaosamuakira/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-22 18:17:23 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/tominagaosamuakira/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
