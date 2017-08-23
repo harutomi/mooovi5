@@ -1,5 +1,9 @@
 TechReviewSite::Application.routes.draw do
   root 'products#index'
-  get 'products' => 'products#index'
-  get 'products/:id' => 'products#show'
+  resources :products, only: :show do
+    resources :reviews, only: [:new, :create]
+    collection do
+      get 'search'
+    end
+  end
 end
