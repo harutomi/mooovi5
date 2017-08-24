@@ -19,7 +19,11 @@
                       <span><i class="icon-rate-60 text-xxsmall opacity-60" title=""></i></span><%= product.title%></h3>
                     <p class="text-small">
                       <span class="rating-star">
-                        <i class="star-actived rate-[ここに評価を表示]0"></i>
+                      <% if product.reviews.present? %>
+                        <i class="star-actived rate-<%= product.review_average %>0"></i>
+                        <% else %>
+                        <i class="star-actived rate-0"></i>
+                      <% end %>
                       </span>
                     </p>
                   </div>
