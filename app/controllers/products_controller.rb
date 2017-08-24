@@ -1,4 +1,7 @@
 class ProductsController < RankingController
+  before_action :authenticate_user!, only: :search
+
+
   def index
     @products = Product.order('id DESC').limit(20)
   end
