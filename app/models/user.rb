@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :reviews
   validates :nickname, presence: true
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
