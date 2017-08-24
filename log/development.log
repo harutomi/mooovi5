@@ -17156,3 +17156,4 @@ Started GET "/assets/application.js?body=1" for ::1 at 2017-08-24 18:02:27 +0900
 
 
 Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-08-24 18:02:27 +0900
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`product_id`) AS count_product_id, product_id AS product_id FROM `reviews` GROUP BY `reviews`.`product_id`  ORDER BY count_product_id DESC LIMIT 5[0m
